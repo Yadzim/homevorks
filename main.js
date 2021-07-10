@@ -1,10 +1,17 @@
+
+
 //   DUM elements
 
 const contener = document.querySelector(".contener");
 
+
 //   color list
 
 const colorlist = [
+  {
+   color: "#000",
+   click: true
+  },
   {
    color: "#e71a43",
    click: false
@@ -115,7 +122,8 @@ const colorlist = [
   }
 ];
 
-//   add and random color list
+
+//   add and render color list
 
 function addAndRenderColor() {
   let result = "";
@@ -123,28 +131,61 @@ function addAndRenderColor() {
 
   for (let list of colorlist) {
     let colorlistRandomIndex = Math.floor(Math.random() * 27);
-    let colorAbjectName = colorlist[colorlistRandomIndex];
-    let colorName = colorAbjectName.color;
+  let colorAbjectName = colorlist[colorlistRandomIndex];
+  let colorName = colorAbjectName.color;
 
     result += `<div style="background-color: ${colorName};" class="box ${list.click ? "click" : ""}" onclick="clickColor(${index})" >${colorName}</div>`;
     index++;
+    // randomColor();
   }
   contener.innerHTML = result;
 }
 
 addAndRenderColor();
 
+
 //   click color
 
 function clickColor(clickColorIndex) {
+  for(let list of colorlist){
+    list.click = false;
+  }
   let color = colorlist[clickColorIndex];
   color.click = !color.click;
 
   addAndRenderColor();
 }
 
-function aaa(){
-  
 
-    addAndRenderColor();
+//   random color list
+
+// function randomColor(){
+
+//   let colorlistRandomIndex = Math.floor(Math.random() * 27);
+//   let colorAbjectName = colorlist[colorlistRandomIndex];
+//   let colorName = colorAbjectName.color;
+//   // addAndRenderColor();
+// }
+
+
+
+function exemple(){
+  let a = false;
+  let render = [1, 2, 3, 4, 5, 6, 7];
+  console.log(render);
+  let randomNumberArray = [];
+
+  while((randomNumberArray.length === 6)){
+    let random = Math.floor(Math.random() * 7);
+    for(let list of randomNumberArray){
+      list === random ? a = true : a;
+    }
+
+    if(!a){
+      randomNumberArray.push(random);
+    }
+  }
+
+  console.log(randomNumberArray);
 }
+exemple();
