@@ -129,12 +129,10 @@ function addAndRenderColor() {
   let result = "";
   let index = 0;
 
+  randomColorList(colorlist);
   for (let list of colorlist) {
-    let colorlistRandomIndex = Math.floor(Math.random() * 27);
-  let colorAbjectName = colorlist[colorlistRandomIndex];
-  let colorName = colorAbjectName.color;
 
-    result += `<div style="background-color: ${colorName};" class="box ${list.click ? "click" : ""}" onclick="clickColor(${index})" >${colorName}</div>`;
+    result += `<div style="background-color: ${list.color};" class="box ${list.click ? "click" : ""}" onclick="clickColor(${index})" >${list.color}</div>`;
     index++;
     // randomColor();
   }
@@ -159,33 +157,16 @@ function clickColor(clickColorIndex) {
 
 //   random color list
 
-// function randomColor(){
+function randomColorList(array) {
+  var currentIndex = array.length,  randomIndex;
 
-//   let colorlistRandomIndex = Math.floor(Math.random() * 27);
-//   let colorAbjectName = colorlist[colorlistRandomIndex];
-//   let colorName = colorAbjectName.color;
-//   // addAndRenderColor();
-// }
-
-
-
-function exemple(){
-  let a = false;
-  let render = [1, 2, 3, 4, 5, 6, 7];
-  console.log(render);
-  let randomNumberArray = [];
-
-  while((randomNumberArray.length === 6)){
-    let random = Math.floor(Math.random() * 7);
-    for(let list of randomNumberArray){
-      list === random ? a = true : a;
-    }
-
-    if(!a){
-      randomNumberArray.push(random);
-    }
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
   }
 
-  console.log(randomNumberArray);
+  return array;
 }
-exemple();
+
+console.log(colorlist);
