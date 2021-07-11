@@ -68,3 +68,7 @@ body{
  background: linear-gradient(-45deg,#ffe53b, #ff2525);
  box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
 }
+
+.color{
+ color: white;
+}

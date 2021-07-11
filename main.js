@@ -1,8 +1,9 @@
 
-
 //   DUM elements
 
 const contener = document.querySelector(".contener");
+
+let a=0;
 
 
 //   color list
@@ -129,13 +130,15 @@ function addAndRenderColor() {
   let result = "";
   let index = 0;
 
+  if(a === 0){
   randomColorList(colorlist);
-  for (let list of colorlist) {
-
-    result += `<div style="background-color: ${list.color};" class="box ${list.click ? "click" : ""}" onclick="clickColor(${index})" >${list.color}</div>`;
-    index++;
-    // randomColor();
   }
+
+  for (let list of colorlist) {
+    result += `<div style="background-color: ${list.color};" class="box ${list.click ? "click" : ""} ${list.color === "#000" ? "color" : ""}" onclick = "clickColor(${index})">${list.color}</div>`;
+    index++;
+  }
+
   contener.innerHTML = result;
 }
 
@@ -148,6 +151,7 @@ function clickColor(clickColorIndex) {
   for(let list of colorlist){
     list.click = false;
   }
+  a = 1;
   let color = colorlist[clickColorIndex];
   color.click = !color.click;
 
@@ -169,4 +173,17 @@ function randomColorList(array) {
   return array;
 }
 
-console.log(colorlist);
+
+//   click random button
+
+function newAddAndRenderColor(){
+  for(let list of colorlist){
+    list.click = false;
+    if(list.color === "#000"){
+      list.click = true;
+    }
+  }
+  a = 0;
+
+  addAndRenderColor();
+}
