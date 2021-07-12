@@ -89,10 +89,15 @@ body{
     height: 30px;
     border-radius: 3px;
     margin-right: 5px;
+    font-size: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #555;
+    cursor: pointer;
+}
+.page:hover{
+    background-color: #444;
 }
 
 button{
@@ -115,7 +120,7 @@ button{
     height: 82px;
     margin: 0;
 }
-.avzast .box{
+.avzast .box, .active{
     background-color: #444;
 }
 .name{
@@ -124,4 +129,7 @@ button{
 }
 i{
     cursor: pointer;
+}
+.fa-heart{
+    color: rgb(253, 72, 40);
 }
