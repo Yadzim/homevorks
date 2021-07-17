@@ -85,7 +85,7 @@ body{
 .total span{
     display: inline-block;
     width: 75px;
-    line-height: 60px;
+    line-height: 65px;
     animation: resultAnimation 2s linear infinite;
 }
 @keyframes resultAnimation {
