@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./main.css">
+    <title>QuizApp/main</title>
+</head>
+<body>
+    <div class="contener">
+        <div class="header">
+            <div class="modeNum animate__animated animate__bounceInLeft" id="modeNum"></div>
+            <h2 class=" animate__animated animate__bounceInDown">quiz app</h2>
+            <div class="timeLimit animate__animated animate__bounceInRight"></div>
+        </div>
+        <div class="main animate__animated animate__bounceInDown">
+                <div class="given">
+                    <div class="number one" id="number1"></div>
+                    <div class="sign" id="sign"></div>
+                    <div class="number two" id="number2"></div>
+                </div>
+                <div class="variant">
+                    <button id="a" class="variantBox animate__animated" onclick="enterBtn()"></button>
+                    <button  class="variantBox animate__animated" id="b" onclick="enterBtn()"></button>
+                    <button  class="variantBox animate__animated" id="c" onclick="enterBtn()"></button>
+                    <button  class="variantBox animate__animated" id="d" onclick="enterBtn()"></button>
+                </div>
+        </div>
+        <div class="result animate__animated animate__bounceInUp" id="result">
+            
+        </div>
+    </div>
+</body>
+<script src="./main.js"></script>
+</html>

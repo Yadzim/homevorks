@@ -1,0 +1,234 @@
+@font-face {
+    font-family: poppins;
+    src: url(./poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: poppins-bold;
+    src: url(./poppins/Poppins-Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    letter-spacing: 2px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+body {
+    /* background-color: #a4a5a6; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    backdrop-filter: blur(15px);
+    /* background-image: url(./img/main-back.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden
+}
+
+.contener {
+    height: auto;
+    width: 100%;
+    padding: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+.header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h2 {
+    font-size: 60px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, .9);
+    /* color: #860c0c; */
+}
+
+.modeNum,
+.timeLimit {
+    width: 80px;
+    height: 80px;
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #47ff54; */
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.5), inset -1px -1px 8px rgba(0, 0, 0, 0.7), inset 2px 2px 8px rgba(255, 255, 255, 1);
+}
+
+.timeLimit {
+    border-radius: 50%;
+    /* animation: timeAnimation 2s linear infinite; */
+}
+
+/* @keyframes timeAnimation {
+
+    0%,
+    100% {}
+
+    50% {
+        width: 90px;
+        height: 90px;
+    }
+} */
+
+
+
+.main {
+    width: 800px;
+    height: 440px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin: 60px auto;
+    border-radius: 40px;
+    background: rgba(126, 119, 158, 0.575);
+    box-shadow: inset 5px 5px 12px rgba(0, 0, 0, 0.7), inset -5px -5px 12px rgba(255, 255, 255, .6);
+}
+
+.given {
+    width: 700px;
+    height: 120px;
+    border-radius: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    /* background-color: #f200fa; */
+    box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.7), inset -1px -1px 8px rgba(0, 0, 0, 0.7), inset 2px 2px 8px rgba(255, 255, 255, 1);
+}
+
+.number {
+    width: 200px;
+    height: 80px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid transparent;
+    text-shadow: 5px 8px 15px rgba(0, 0, 0, 0.5);
+    /* background-color: #3edec1; */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7), -1px -1px 8px rgba(255, 255, 255, .7), inset 1px 1px 8px rgba(0, 0, 0, 0.7), inset -2px -2px 8px rgba(255, 255, 255, .7);
+    /* box-shadow:0 0 10px rgba(0, 0, 0, 0.5), inset -1px -1px 8px rgba(0, 0, 0, 0.7), inset 2px 2px 8px rgba(255, 255, 255, 1); */
+}
+
+.sign {
+    font-size: 60px;
+}
+
+.variant {
+    width: auto;
+    height: 200px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 40px 80px;
+}
+
+.variantBox {
+    width: 250px;
+    height: 80px;
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    background-color: #86848499;
+    /* background-color: #59ddff; */
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.5), inset -1px -1px 8px rgba(0, 0, 0, 0.7), inset 2px 2px 8px rgba(255, 255, 255, 1);
+}
+
+
+
+.result {
+    width: 100%;
+    height: 90px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 20px;
+    /* background-color: #666; */
+    background: rgba(126, 119, 158, 0.575);
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.7), inset -3px -3px 9px rgba(255, 255, 255, .7);
+}
+
+.result .crk {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: green;
+    margin-right: 20px;
+    box-shadow: inset -5px 10px 30px rgba(0, 0, 0, 0.8), 7px -14px 30px rgba(0, 0, 0, 0.7);
+    transform: rotate(120deg);
+}
+
+.result .crk2 {
+    background-color: red;
+}
+
+:root{--animate-duration:1s;--animate-delay:1s;--animate-repeat:1}
+.variantBox:active {
+    animation-duration: .75s;
+    animation-duration: calc(var(--animate-duration)*0.75);
+    animation-name: bounceIn
+}
+
+@keyframes bounceIn {
+
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+    }
+
+    0% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3)
+    }
+
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1)
+    }
+
+    40% {
+        transform: scale3d(.9, .9, .9)
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03)
+    }
+
+    80% {
+        transform: scale3d(.97, .97, .97)
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1)
+    }
+}

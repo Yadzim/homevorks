@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./start.css">
+    <title>QuizApp/start</title>
+</head>
+<body>
+    <div class="box animate__animated" id="box">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <h2>basic quiz app related to math</h2>
+        <a href="./main.html"><button class="btn" onclick="startAnimation()">start</button></a>
+    </div>
+</body>
+<script>
+    function startAnimation(){
+        let elemant=document.getElementById("box");
+        elemant.classList.add("animate__zoomOutDown");
+    }
+</script>
+</html>
