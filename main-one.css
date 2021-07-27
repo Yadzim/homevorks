@@ -1,0 +1,159 @@
+@font-face {
+  font-family: poppins;
+  src: url();
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #410B76;
+}
+
+/*  start page */
+
+.category, a{
+  width: 250px;
+  height: 60px;
+  border-radius: 12px;
+  margin: 25px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  color: #fff;
+  background-color: #9041CE;
+  text-decoration: none;
+}
+
+.category span{
+  display: inline-block;
+  width: 52px;
+  height: 26px;
+  border-radius: 5px;
+  background-color: #410B76;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  margin-left: 11px;
+  transition: .3s linear transform;
+}
+
+.category:active{
+  transform: scale(.96);
+}
+.category:hover{
+  background-color: #8931cc;
+}
+
+/*  main page */
+
+.contener{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.fas{
+  position: absolute;
+  font-size: 60px;
+  color: #fff;
+  cursor: pointer;
+  padding: 20px;
+  background-color: #9041CE;
+  transform: translateY(-50%);
+  top: 50%;
+  transition: .2s linear;
+  z-index: 100;
+}
+
+.fas:active{
+  font-size: 50px;
+}
+.left{
+  left: 50px;
+}
+.right{
+  right: 50px;
+}
+
+.contener img{
+  height: 100%;
+  width: 100%;
+  /* transform: translateX(-1600px); */
+}
+
+/* .animationright{
+  animation: aright 1.5s ease-in;
+}
+
+@keyframes aright {
+  0%{
+  }
+  60%{
+    width: 100%;
+    transform: translateX(0px);
+  }
+  70%{
+    width: 100%;
+    transform: translateX(-50px);
+  }
+  90%{
+    width: 100%;
+    transform: translateX(-15px);
+  }
+  80%,100%{
+    width: 100%;
+    transform: translate(0px);
+  }
+} */
+
+.points{
+  display: flex;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+.point{
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.black{
+  background-color: black;
+  border: 2px solid #fff;
+}
+
+.order{
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  z-index: 100;
+}
+.order > div{
+  font-size: 30px;
+  color: #fff;
+}
+
+/* .isDisabled {
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+} */
