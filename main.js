@@ -43,11 +43,14 @@ console.log(words);
 function placementWord(){
   let index = 1;
   for(let word of words){
-    result += "<div class='word findedWord'>" + word + "</div>";
+    result += "<div class='word'>" + word + "</div>";
 
     if(index%3 === 0){
       findedWords.innerHTML += "<div>" + result + "</div>";
       result = "";
+
+      // 😉
+      document.querySelector(".word").classList.add("findedWord");
     }
 
     index++;
