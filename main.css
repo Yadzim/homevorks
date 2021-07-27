@@ -24,8 +24,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    backdrop-filter: blur(15px);
-    /* background-image: url(./img/main-back.jpg); */
+    backdrop-filter: blur(25px);
+    background-image: url(./img/main-back.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden
