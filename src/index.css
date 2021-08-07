@@ -1,13 +1,456 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: GilroySemiBold;
+  src: url(./fonts/GilroySemiBold/gilroy-semibold.ttf);
+}
+@font-face {
+  font-family: GilroyBlack;
+  src: url(./fonts/GilroySemiBold/gilroy-black.ttf);
+}
+@font-face {
+  font-family: GilroyBold;
+  src: url(./fonts/GilroySemiBold/gilroy-bold.ttf);
+}
+@font-face {
+  font-family: "TT Norms Pro";
+  src: url(./fonts/TTNormsPro/TTNorms-Regular.otf);
+}
+@font-face {
+  font-family: "TT Norms Pro medium";
+  src: url(./fonts/TTNormsPro/TTNorms-Medium.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "TT Norms Pro";
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  color: #262626;
+  z-index: 100;
+}
+
+body > div{
+  background-color: #f6f6f6;
+}
+
+.body1 {
+  width: 1280px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+
+.header {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  background: rgba(245, 245, 245, 0.95);
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, .7);
+  /* filter: blur(2px); */
+  z-index: 999;
+}
+.head {
+  height: 5rem;
+  width: 1280px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+.head a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #000;
+}
+.head ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* text-decoration: none; */
+  list-style: none;
+}
+.head-ul a {
+  margin-right: 2rem;
+}
+
+.head a svg {
+  width: 100px;
+  height: 30px;
+  margin-right: 2rem;
+}
+.head-a {
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #ecc9ba;
+}
+
+.video {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 1px 50%;
+  padding-top: 5.5rem;
+}
+.video-text {
+  padding-right: 1rem;
+  margin: 6rem 0;
+}
+.video-text h1 {
+  font-size: 72px;
+  font-family: GilroySemiBold;
+  line-height: 1.05;
+}
+.video-text span {
+  font-family: GilroyBlack;
+  position: relative;
+  /* font-weight: 900; */
+}
+.video-text span::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  top: 10%;
+  left: -8%;
+  width: 153%;
+  height: 93%;
+  background-image: url(https://shelfi.io/_next/static/media/line.6218aad8403063292576927119249367.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  z-index: -1;
+}
+.video-text h2 {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.7);
+  margin-top: 2rem;
+}
+button {
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.video-text button:focus {
+  outline: none;
+}
+button:hover{
+  background-color: #262626;
+}
+.video-absolute {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.video-absolute1 {
+  transform: translate(-50%, -50%);
+  width: 95px;
+  height: 95px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 5%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatis {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 4rem;
+}
+.whatis-text {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  justify-content: center;
+}
+.title p {
+  font-family: "TT Norms Pro medium";
+  font-weight: 500;
+  font-size: 18px;
+  color: #82d5ee;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+.title h4 {
+  font-family: GilroyBold;
+  font-size: 40px;
+  line-height: 1.5;
+}
+.whatis-icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.whatis-icon {
+  height: 280px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.whatis-icon article {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.whatis-icon article span {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 2rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  margin-right: 1rem;
+}
+.whatis-icon article h4 {
+  font-family: GilroyBold;
+  font-size: 16px;
+  line-height: 24px;
+}
+.whatis-icon article p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.whatis-img img {
+  width: 400px;
+}
+
+.calculate {
+  display: grid;
+  grid-template-columns: 36% 64%;
+  margin-top: 3rem;
+}
+.calculate-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ccenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3.5rem;
+  margin-bottom: 2.5rem;
+}
+.h4 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.h4 h4 {
+  font-size: 20px;
+  font-family: GilroyBold;
+}
+.ccenter p {
+  font-size: 16px;
+  font-style: italic;
+  margin-top: 12px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.cdeep {
+  margin: 1.5rem 0;
+}
+.calculate-text svg {
+  width: 98%;
+}
+.calculate-img {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.start {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+}
+.iphones {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2rem;
+  padding: 2rem 0 3rem 0;
+}
+.iphone-box {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 48px 24px 0;
+  max-width: 460px;
+  text-align: center;
+  /* flex: 1; */
+}
+.iphone-box1 {
+  background-color: #ecbbd3;
+}
+.iphone-box2 {
+  background-color: #ecc9bb;
+}
+.iphone-box3 {
+  background-color: #75d1ed;
+}
+.iphone-box h4 {
+  font-family: GilroyBold;
+  font-size: 30px;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.iphone-box p {
+  font-family: "TT Norms Pro medium";
+  font-size: 18px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  /* font-weight: 500; */
+}
+.iphone-box img {
+  margin-top: 1.5rem;
+}
+.sdeep {
+  padding: 3rem 4rem;
+  margin: 1.5rem 0 3rem;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  background-color: rgba(236, 201, 187, 0.5);
+  border-radius: 15px;
+}
+.sdeep-text h4 {
+  font-family: GilroyBold;
+  font-size: 35px;
+}
+.sdeep-img {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.sdeep-img img {
+  width: 270px;
+}
+
+.download {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.download-text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.store {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+.store1 {
+  background-color: #fff;
+  padding: 7px 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.2s linear;
+  width: 80%;
+  /* box-sizing: border-box; */
+}
+.store1 img {
+  height: 38px;
+}
+.tect {
+  margin-left: 1rem;
+}
+.store1 .tect img {
+  height: 23px;
+}
+.store1 .tect p {
+  font-family: "TT Norms Pro medium";
+  font-size: 18px;
+  color: #262626;
+}
+.download-img {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.download-img img {
+  width: 500px;
+}
+.download-text span {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 1em 0;
+}
+
+
+.brends{
+  padding: 64px 0;
+}
+.brends-box{
+  height: 140px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 32px 0;
+}
+
+
+
+.question{
+  padding: 32px 0;
+}
+.question-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.question-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.question-img img{
+  height: 406px;
+}
+
+.question-text{
+  display: flex;
+  align-items: center;
+}
+.question-text > div{
+  background-color: #fff;
+  border-radius: 10px;
+  width: 100%;
+}
+.question-text p{
+  display: flex;
+  justify-content: space-between;
+  font-family: GilroyBold;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 12px 40px 12px 16px;
+  position: relative;
+  color: rgba(0,0,0,.85);
+  line-height: 1.5715;
+  cursor: pointer;
+  transition: all .3s;
 }
