@@ -17,16 +17,27 @@
         <div class="result">
             <div class="correct result-in">
                 <div class="crk"></div>
-                <p> = <span> 10</span></p>
+                <p> = <span class="inCorrect"> 10</span></p>
             </div>
             <div class="mistek result-in">
                 <div class="crk crk2"></div>
-                <p> = <span> 5</span></p>
+                <p>+   </p>
+                <div class="crk crk3"></div>
+                <p> = <span class="mistakeAndTimeOut"> 5</span></p>
             </div>
         </div>
         <div class="total">
-            <p>Total Point = <span>66</span> %</p>
+            <p>Total Point = <span class="percent">66</span> %</p>
         </div>
     </div>
 </body>
+<script src="./result.js">
+    // export function totalPoint(green, red, yellow){
+    //     document.querySelector(".inCorrect").innerHTML = yellow;
+    //     document.querySelector(".mistakeAndTimeOut").innerHTML = yellow + red;
+    //     document.querySelector(".percent").innerHTML = green / (yellow + red + green);
+
+    //     console.log( green, red, yellow);
+    //   }
+</script>
 </html>

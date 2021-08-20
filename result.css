@@ -20,7 +20,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url(./img/back.jpg);
+    background-image: url(./img/abstract-geometric-background.webp);
     background-size: cover;
     background-repeat: no-repeat;
     backdrop-filter: blur(5px);
@@ -38,6 +38,7 @@ body{
     flex-direction: column;
     backdrop-filter: blur(5px);
     padding: 30px;
+    /* animation: resultAnimation 2s linear infinite; */
 }
 .box > h2{
     font-size: 40px;
@@ -81,18 +82,20 @@ body{
 .result .crk2{
     background-color: red;
 }
+.result .crk3{
+    background-color: #ffd900;
+}
 
 .total span{
     display: inline-block;
     width: 75px;
-    line-height: 65px;
-    animation: resultAnimation 2s linear infinite;
+    line-height: 70px;
 }
 @keyframes resultAnimation {
     0%, 100%{
 
     }
     50%{
-        font-size: 55px;
+        transform: scale(.98);
     }
 }
