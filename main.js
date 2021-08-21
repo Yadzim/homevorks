@@ -1,13 +1,15 @@
 
-//   elements
+//   DOM elements
 const btns = document.querySelectorAll(".variantBox");
 const crks = document.getElementById('result');
 const timeLimit = document.querySelector(".timeLimit");
+const resultPage = document.getElementById('resultBody');
 
 const greenCrk = '<div class="crk"></div>';
 const redCrk = '<div class="crk crk2"></div>';
 const yellowCrk = '<div class="crk crk3"></div>';
 
+//   js elements
 const signArrey = ["+", "-", "*"];
 let variants = [];
 
@@ -23,8 +25,6 @@ function renderAndRandomNumber() {
   document.getElementById("number1").innerHTML = num1;
   document.getElementById("number2").innerHTML = num2;
 
-  // console.log(num1, num2);
-
   renderAndRandomSign();
   calculate();
   renderAndRandomVariant();
@@ -36,16 +36,12 @@ renderAndRandomNumber();
 function renderAndRandomSign() {
   sign = signArrey[Math.floor(Math.random() * 3)];
   document.getElementById("sign").innerHTML = sign;
-
-  // console.log(sign);
 }
 renderAndRandomSign();
 
 //   calculate
 function calculate() {
   result = eval(num1 + sign + num2);
-
-  console.log(result);
 }
 calculate();
 
@@ -65,7 +61,7 @@ function renderAndRandomVariant() {
     btn.innerHTML = variants[idx];
     idx++;
   }
-  // console.log(variants);
+  console.log(variants);
 }
 renderAndRandomVariant();
 
@@ -83,19 +79,16 @@ function addCrk() {
       order++;
       time = 10;
       renderAndRandomNumber();
-      // console.log(green, red);
     });
   }
-
 }
 addCrk();
 
 //   add order number
 function addOrderNumber() {
   document.getElementById("modeNum").innerHTML = order;
-
   if (order === 15) {
-    window.location = "result.html";
+    resultPage.style.display="flex";
     totalPoint();
   }
 }
@@ -112,13 +105,23 @@ function timeLimite(){
       yellow++;
       renderAndRandomNumber();
     }
-    // console.log(yellow);
     time--;
   }, 1000);
 }
 timeLimite();
+setTimeout(() => {
+  document.querySelector(".timeLimit").classList.remove("animate__bounceInRight");
+  document.querySelector(".timeLimit").classList.add("timeAnimation")
+}, 1500);
 
 //   total point
-import { totalPoint } from "./result";
+function totalPoint(){
+  document.querySelector(".inCorrect").innerHTML = green;
+  document.querySelector(".mistakeAndTimeOut").innerHTML = yellow + red;
+  document.querySelector(".percent").innerHTML = Math.floor(green * 100 / (yellow + red + green));
 
-totalPoint(green, red, yellow);
+  setTimeout(() => {
+    document.querySelector(".resultBox").classList.remove("animate__bounceIn");
+    document.querySelector(".resultBox").classList.add("resultAnimation")
+  }, 1500);
+}
