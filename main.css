@@ -61,9 +61,6 @@ body{
 /*  main page */
 
 .contener{
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   display: grid;
   grid-template-columns: auto auto;
   gap: 36px;
