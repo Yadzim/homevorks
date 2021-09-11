@@ -15,7 +15,6 @@ const words18 = ["hello", "apple", "space", "home", "ship", "find"];
 let saver = [];
 let result = "";
 
-words = words12;
 
 //   click category btn
 // easy.addEventListener("click", () => {
