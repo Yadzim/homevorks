@@ -1,0 +1,27 @@
+.react-icon {
+  transition: 0.3s linear all;
+  fill: red;
+  font-size: 2rem;
+}
+.react-icon:hover {
+  cursor: pointer;
+}
+.react-icon:active {
+  transform: scale(0.95);
+}
+
+.list-group-item:hover {
+  cursor: pointer;
+}
+
+.register-box{
+  width: 50%;
+  height: auto;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 2px solid #0D6EFD;
+  margin: 2rem auto;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
