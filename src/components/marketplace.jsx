@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import { MarketplaceS } from '../styles/style';
 import { cartImg1, cartImg11, cartImg2, cartImg3 } from '../utilis/imgs';
 
 export default class Marketplace extends Component {
   render() {
     return (
-      <MarketplaceS>
+      <MarketplaceS id="marketplace">
         <h1 className="maxTitle">Your eCommerce made simple</h1>
         <div className="card-group">
           <div class="card">
@@ -39,38 +39,4 @@ export default class Marketplace extends Component {
   }
 }
 
-const MarketplaceS = styled.div`
-  height: 1100px;
-  padding: 0 220px;
-  img{
-    width: 530px;
-  }
-  .absolute{
-    width: 262px;
-    height: 354px;
-    position: absolute;
-    top: 58px;
-    left: -106px;
-  }
-  h1{
-    width: 457px;
-    margin-bottom: 56px;
-    margin-top: -56px;
-  }
-  .card{
-    .card-body{
-      width: 530px;
-      padding: 0 50px;
-      p{
-        line-height: 30px;
-        color:rgba(39, 45, 78, .6);
-      }
-    }
-    &:nth-child(2){
-      margin-top: 70px;
-    }
-    &:nth-child(3){
-      margin-top: 140px;
-    }
-  }
-`;
+

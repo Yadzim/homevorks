@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import { FooterS } from '../styles/style';
 import { icon1, icon2, icon3, logo1, icons1, icons2, icons3, icons4, imgTop } from '../utilis/imgs';
-import styled from 'styled-components';
 
 export default class Footer extends Component {
   render() {
     return (
-      <FooterS>
+      <FooterS id="footer">
         <div className="top">
           <div className="item">
             <div>
@@ -82,68 +82,3 @@ export default class Footer extends Component {
     )
   }
 }
-
-const FooterS = styled.div`
-  .top{
-    background: #7854f7;
-    .item{
-      display: grid;
-      grid-template-columns: auto auto auto;
-      gap: 118px;
-      padding: 45px 340px;
-      div{
-        display: flex;
-        align-items: center;
-        p{
-          margin: 0;
-          margin-left: 15px;
-        }
-      }
-    }
-    hr{
-      width: 1480px;
-      border: 1px solid #9A7DFF;
-      margin: 34px auto;
-    }
-    footer{
-      display: flex;
-      justify-content: space-between;
-      padding: 0 435px;
-      padding-bottom: 64px;
-      color: #fff;
-      h5{
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 52px;
-        margin: 0;
-      }
-      li{
-        font-size: 12px;
-        line-height: 22px;
-        list-style: none;
-        cursor: pointer;
-        &:hover{
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-  .deep{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 22px 220px;
-    p{
-      margin: 0;
-    }
-    .imgs{
-      img{
-        margin-right: 54px;
-        &:nth-child(4){
-          margin: 0;
-        }
-      }
-    }
-  }
-
-`;

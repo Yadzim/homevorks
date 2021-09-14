@@ -14,19 +14,19 @@ export default class Navbar extends Component {
             <div className="collapse navbar-collapse ms-5">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link to='/' className="nav-link" href="#">Sell</Link>
+                  <a className="nav-link" href="#">Sell</a>
                 </li>
                 <li className="nav-item">
-                  <Link to='/' className="nav-link" href="#">Marketplace</Link>
+                  <a className="nav-link" href="#marketplace">Marketplace</a>
                 </li>
                 <li className="nav-item">
-                  <Link to='/' className="nav-link">Community</Link>
+                  <a href="#community" className="nav-link">Community</a>
                 </li>
                 <li className="nav-item">
-                  <Link to='/' className="nav-link">Develop</Link>
+                  <a href="#develop" className="nav-link">Develop</a>
                 </li>
                 <li className="nav-item">
-                  <Link to='/' className="nav-link">Resources</Link>
+                  <a href="#resource" className="nav-link">Resources</a>
                 </li>
               </ul>
               <form className="d-flex align-items-center">

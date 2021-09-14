@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import { featuredImg, bg, vector } from '../utilis/imgs';
+import {Sellconteiner } from '../styles/style';
+import { featuredImg,vector } from '../utilis/imgs';
 
 export default class Sell extends Component {
   render() {
@@ -22,33 +22,3 @@ export default class Sell extends Component {
     )
   }
 }
-
-const Sellconteiner = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  padding: 200px 0 0 220px;
-  background-image: url(${bg});
-  h1{
-    font-size: 85px;
-    line-height: 95px;
-    margin-bottom: 30px;
-  }
-  p{
-    width: 716px;
-    line-height: 25px;
-    color:rgba(39, 45, 78, .6);
-  }
-  img{
-    z-index: 10;
-  }
-  .vector{
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-  }
-  .btn{
-    padding: 18px 62px;
-  }
-`;

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import { comBg, com1, com2, comVector, devBg, devGroup } from '../utilis/imgs';
+import { CommunityS } from '../styles/style';
+import { com1, com2, devBg, devGroup } from '../utilis/imgs';
 
 export default class Community extends Component {
   render() {
     return (
       <>
-        <CommunityS>
+        <CommunityS id="community">
           <div class="card">
               <img src={com1} class="img-fluid rounded-start" alt="..."/>
               <div class="card-body">
@@ -35,59 +35,12 @@ export default class Community extends Component {
               <img src={com2} class="img-fluid rounded-end" alt="..."/>
           </div>
         </CommunityS>
-        <div className="develop">
+        <div id="develop">
           <img src={devBg} alt="" />
           <img src={devGroup} alt="" className="developGroup"/>
-          {/* bu rasmlarni hammasini yigishni ilojini topa olmadim shuning uchun rasmni quyib quydim */}
         </div>
       </>
     )
   }
 }
 
-const CommunityS = styled.div`
-  padding: 0 345px;
-  background-image: url(${comBg});
-  background-repeat: no-repeat;
-  .card{
-    display: grid;
-    grid-template-columns: 490px 480px;
-    gap: 50px;
-    background: transparent;
-    .card-body{
-      display: flex;
-      /* justify-content: center; */
-      align-items: center;
-      .btn{
-        background: #70c212;
-        padding: 18px 26px;
-        color: #fff;
-        &:hover{
-          background: #66b30e;
-        }
-      }
-      h5{
-        line-height: 46px;
-        color: #fff;
-      }
-      p{
-        width: 480px;
-        color: #fff;
-        margin: 13px 0 39px 0;
-      }
-    }
-    img{
-      width: 490px;
-      &:nth-child(1){
-        margin-top: -40px;
-      }
-    }
-    &:nth-child(1){
-      margin-left: -50px;
-    }
-    &:nth-child(2){
-      margin-left: 250px;
-    }
-  }
-
-`;
