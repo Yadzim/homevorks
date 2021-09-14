@@ -24,6 +24,7 @@ export default class Sell extends Component {
 }
 
 const Sellconteiner = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 200px 0 0 220px;
