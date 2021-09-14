@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/navbar";
+import Home from "./components/home";
+import NotFound from "./components/not-found";
+import { Switch, Route, Redirect, useLocation } from 'react-router-dom';
 
-function App() {
+const App = () => {
+  const {pathname} = useLocation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      { pathname !== '/not-found' && <Navbar/> }
+      <Switch>
+        <Route path='/' exact component={Home}/>
+        <Route path='/not-found' component={NotFound}/>
+        <Redirect to='/not-found'/>
+      </Switch>
+    </>
   );
-}
+};
 
 export default App;
